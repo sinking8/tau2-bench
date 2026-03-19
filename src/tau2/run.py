@@ -1,3 +1,7 @@
+'''
+tau2 run --domain airline --agent-llm vertex_ai/gemini-2.5-flash --user-llm vertex_ai/gemini-2.5-flash --num-trials 3 --task-split base
+'''
+
 import json
 import multiprocessing
 import random

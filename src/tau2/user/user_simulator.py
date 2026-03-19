@@ -123,7 +123,12 @@ class UserSimulator(BaseUser):
         """
         if message.is_tool_call():
             return False
-        assert message.content is not None
+        if message is None:
+            return False
+        if message.content is None:
+            return False
+        
+        #assert message.content is not None
         return (
             STOP in message.content
             or TRANSFER in message.content
